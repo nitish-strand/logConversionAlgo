@@ -1,0 +1,10 @@
+D:\AlgorithmEngine\algorithmrep\algorithm\obj\Debug\algorithm.csprojAssemblyReference.cache
+D:\AlgorithmEngine\algorithmrep\algorithm\bin\Debug\algorithm.dll
+D:\AlgorithmEngine\algorithmrep\algorithm\bin\Debug\algorithm.pdb
+D:\AlgorithmEngine\algorithmrep\algorithm\bin\Debug\Microsoft.Practices.Prism.dll
+D:\AlgorithmEngine\algorithmrep\algorithm\bin\Debug\Microsoft.Practices.Prism.UnityExtensions.dll
+D:\AlgorithmEngine\algorithmrep\algorithm\bin\Debug\Microsoft.Practices.ServiceLocation.dll
+D:\AlgorithmEngine\algorithmrep\algorithm\bin\Debug\Microsoft.Practices.Unity.dll
+D:\AlgorithmEngine\algorithmrep\algorithm\obj\Debug\algorithm.csproj.CopyComplete
+D:\AlgorithmEngine\algorithmrep\algorithm\obj\Debug\algorithm.dll
+D:\AlgorithmEngine\algorithmrep\algorithm\obj\Debug\algorithm.pdb
