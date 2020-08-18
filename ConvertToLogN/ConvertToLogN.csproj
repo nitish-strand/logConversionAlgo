@@ -44,11 +44,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LogBaseParameter.cs" />
     <Compile Include="LogConversion.cs" />
-    <Compile Include="LogConversionIn.cs" />
-    <Compile Include="LogConversionOut.cs" />
-    <Compile Include="LogConversionParameteres.cs" />
-    <Compile Include="LogConversionResult.cs" />
+    <Compile Include="LogConversionInput.cs" />
+    <Compile Include="LogConversionOutput.cs" />
+    <Compile Include="DatasetParameter.cs" />
+    <Compile Include="DatasetResult.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

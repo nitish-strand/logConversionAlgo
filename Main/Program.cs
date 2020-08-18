@@ -12,17 +12,17 @@ namespace Main
     {
         static void Main(string[] args)
         {
-            string[] stringArr = new string[] { "GENESPRING", "STRANDLIFESCIENCES", "BIOINFORMATICS", "SOFTWAREDEVELOPMENT", "GENOMICMED" };
-            float[] floatArr = new float[] { 23.5f, 10.34f, 56.8f, 44.7f, 60.1f };
+            float[] floatArr1 = new float[] { 23.5f, 10.34f, 56.8f, 44.7f, 60.1f };
+            float[] floatArr2 = new float[] { 23.5f, 10.34f, 56.8f, 44.7f, 60.1f };
 
-            IColumn TeamName = ColumnFactory.CreateStringColumn("Name", stringArr);
-            IColumn Score = ColumnFactory.CreateFloatColumn("Score", floatArr);
+            IColumn Score1 = ColumnFactory.CreateFloatColumn("Score1", floatArr1);
+            IColumn Score2 = ColumnFactory.CreateFloatColumn("Score2", floatArr2);
 
-            IColumn[] columns = new IColumn[] { TeamName, Score };
+            IColumn[] columns = new IColumn[] { Score1, Score2 };
 
             IDataset dataset = DatasetFactory.CreateDataset("testDataset", columns, 5);
 
-            LogConversion logConversion = new LogConversion(dataset, 1, "Score", 10);
+            LogConversion logConversion = new LogConversion(dataset, 10);
             logConversion.Execute();
 
 

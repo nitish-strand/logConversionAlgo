@@ -10,37 +10,46 @@ namespace ConvertToLogN
 {
     public class LogConversion : IAlgorithm
     {
-        public IAlgorithmInput Input { get; set; } 
+        public IAlgorithmInput Input { get; set; }
         public IAlgorithmOutput Output { get; set; }
 
-        private IDataset dataset;
-        private int columnIndex;
-        private string columnName;
-        private float _base;
+        private DatasetParameter datasetParameter;
+        private LogBaseParameter logBaseParameter;
 
-        public LogConversion(IDataset Dataset, int ColumnIndex, string ColumnName, float Base)
+        public LogConversion(IDataset dataset, float baseN)
         {
-            dataset = Dataset;
-            columnIndex = ColumnIndex;
-            columnName = ColumnName;
-            _base = Base;
+            datasetParameter = new DatasetParameter();
+            logBaseParameter = new LogBaseParameter();
+
+            datasetParameter.Dataset = dataset;
+            logBaseParameter.LogBase = baseN;
+
+            LogConversionInput logConversionInput = new LogConversionInput();
+            logConversionInput.dataset = datasetParameter;
+            logConversionInput.baseN = logBaseParameter;
+
+            Input = logConversionInput;
         }
 
         public void Execute()
         {
-            LogConversionParameters logConversionParameters = new LogConversionParameters(dataset, columnIndex, columnName, _base);
-            LogConversionIn logConversionIn = new LogConversionIn(logConversionParameters);
+            IDataset newdataset = new Dataset("testDataSet", 5);
 
-            Input = logConversionIn;
+            for (int i = 0; i < datasetParameter.Dataset.GetColumnCount(); i++)
+            {
+                IColumn column = datasetParameter.Dataset.GetColumn(i);
+                IColumn newColumn = ColumnOperations.Log(column, logBaseParameter.LogBase, column.GetName());
 
-            LogConversionResult logConversionResult = new LogConversionResult(logConversionParameters, logConversionIn);
-            logConversionResult.LogConversion();
+                newdataset.AddColumn(newColumn);
+            }
 
-            LogConversionOut logConversionOut = new LogConversionOut(logConversionResult);
+            DatasetResult datasetResult = new DatasetResult();
+            datasetResult.Dataset = newdataset;
 
-            Output = logConversionOut;
+            LogConversionOutput logConversionOutput = new LogConversionOutput();
+            logConversionOutput.NewDataset = datasetResult;
 
-            Console.WriteLine("Dataset is converted. ");
+            Output = logConversionOutput;
         }
     }
 }
