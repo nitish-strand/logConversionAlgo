@@ -1,11 +1,12 @@
-﻿using OpenLab.Agilent.Spring.Algorithm;
+﻿using OpenLab.Agilent.cube.dataset;
+using OpenLab.Agilent.Spring.Algorithm;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConvertToLogN
+namespace OpenLab.Agilent.Spring.Algorithm.ConvertToLogN
 {
     public class LogConversionOutput : IAlgorithmOutput
     {
@@ -13,8 +14,10 @@ namespace ConvertToLogN
 
         public DatasetResult NewDataset { get; set; }
 
-        public LogConversionOutput()
+        public LogConversionOutput(IDataset datasetResult)
         {
+            NewDataset = new DatasetResult(datasetResult);
+
             Results.Add("dataset", NewDataset);
         }
     }

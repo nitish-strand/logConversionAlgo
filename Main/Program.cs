@@ -1,4 +1,4 @@
-﻿using ConvertToLogN;
+﻿using OpenLab.Agilent.Spring.Algorithm.ConvertToLogN;
 using OpenLab.Agilent.cube.dataset;
 using System;
 using System.Collections.Generic;
@@ -21,10 +21,13 @@ namespace Main
             IColumn[] columns = new IColumn[] { Score1, Score2 };
 
             IDataset dataset = DatasetFactory.CreateDataset("testDataset", columns, 5);
+            float baseN = 10;
 
-            LogConversion logConversion = new LogConversion(dataset, 10);
+            LogConversionInput logConversionInput = new LogConversionInput(dataset, baseN);
+
+            LogConversion logConversion = new LogConversion(logConversionInput);
+            //logConversion.Input = logConversionInput;
             logConversion.Execute();
-
 
             for (int i = 0; i < dataset.GetRowCount(); i++)
             {

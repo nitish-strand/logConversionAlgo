@@ -6,7 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConvertToLogN
+namespace OpenLab.Agilent.Spring.Algorithm.ConvertToLogN
 {
     public class LogConversionInput : IAlgorithmInput 
     {
@@ -16,10 +16,13 @@ namespace ConvertToLogN
 
         public LogBaseParameter baseN { get; set; }
 
-        public LogConversionInput()
+        public LogConversionInput(IDataset dataset, float baseN)
         {
-            Parameters.Add("dataset", dataset);
-            Parameters.Add("logbase", baseN);
+            IAlgorithmParameter datasetParameter = new DatasetParameter(dataset);
+            IAlgorithmParameter logBaseParameter = new LogBaseParameter(baseN);
+
+            Parameters.Add("dataset", datasetParameter);
+            Parameters.Add("logbase", logBaseParameter);
         }
 
         public void Validate()

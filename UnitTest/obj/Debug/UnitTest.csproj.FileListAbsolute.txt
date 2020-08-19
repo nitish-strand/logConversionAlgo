@@ -11,3 +11,16 @@ D:\AlgorithmEngine\algorithmrep\UnitTest\bin\Debug\Microsoft.VisualStudio.TestPl
 D:\AlgorithmEngine\algorithmrep\UnitTest\obj\Debug\UnitTest.csproj.CopyComplete
 D:\AlgorithmEngine\algorithmrep\UnitTest\obj\Debug\UnitTest.dll
 D:\AlgorithmEngine\algorithmrep\UnitTest\obj\Debug\UnitTest.pdb
+D:\AlgorithmEngine\logConversionAlgo\UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+D:\AlgorithmEngine\logConversionAlgo\UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+D:\AlgorithmEngine\logConversionAlgo\UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+D:\AlgorithmEngine\logConversionAlgo\UnitTest\bin\Debug\UnitTest.dll
+D:\AlgorithmEngine\logConversionAlgo\UnitTest\bin\Debug\UnitTest.pdb
+D:\AlgorithmEngine\logConversionAlgo\UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+D:\AlgorithmEngine\logConversionAlgo\UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+D:\AlgorithmEngine\logConversionAlgo\UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+D:\AlgorithmEngine\logConversionAlgo\UnitTest\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+D:\AlgorithmEngine\logConversionAlgo\UnitTest\obj\Debug\UnitTest.csprojAssemblyReference.cache
+D:\AlgorithmEngine\logConversionAlgo\UnitTest\obj\Debug\UnitTest.csproj.CopyComplete
+D:\AlgorithmEngine\logConversionAlgo\UnitTest\obj\Debug\UnitTest.dll
+D:\AlgorithmEngine\logConversionAlgo\UnitTest\obj\Debug\UnitTest.pdb

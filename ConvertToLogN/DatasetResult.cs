@@ -6,10 +6,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ConvertToLogN
+namespace OpenLab.Agilent.Spring.Algorithm.ConvertToLogN
 {
     public class DatasetResult : IAlgorithmResult
     {
         public IDataset Dataset { get; set; }
+        public DatasetResult(IDataset dataset)
+        {
+            Dataset = dataset;
+        }
     }
 }
